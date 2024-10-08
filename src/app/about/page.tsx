@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Download, Github, Linkedin, Mail, Twitter, GraduationCap, Briefcase, Search, Calendar, Building } from "lucide-react"
 import Link from "next/link"
 import { Certificates } from "@/data/certificates"
-import { CertificatePopup } from "./_components/certificatesPopUp"
 import { Experiences } from "@/data/experiences"
 import dayjs from 'dayjs'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -77,7 +76,7 @@ const CertificateCard = ({ cert }: { cert: Certificate }) => {
     )
 }
 
-export const CertificatesModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
+const CertificatesModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
     const [searchTerm, setSearchTerm] = useState("")
     const [selectedSkill, setSelectedSkill] = useState("All")
     const [filteredCertificates, setFilteredCertificates] = useState<Certificate[]>([])
