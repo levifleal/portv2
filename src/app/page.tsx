@@ -1,101 +1,89 @@
-import Image from "next/image";
+"use client"
+
+import React, {  } from "react"
+import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion"
+import { Github, Linkedin, Twitter } from "lucide-react"
+import { Projects } from "@/data/projects"
+import { ProjectCard } from "./_components/projectsCard"
+import { Skills } from "@/data/skills"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        <main className="container mx-auto px-4 py-12">
+          <section id="about" className="mb-24 h-[50vh] flex flex-col justify-center ">
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <motion.div
+                className="md:w-1/2 mb-8 md:mb-0"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <h2 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-700">
+                  Front-End Developer
+                </h2>
+                <p className="text-xl mb-6 text-gray-700 dark:text-gray-300">
+                  Desenvolvendo soluções web inovadoras, com foco em experiências do usuário, acessibilidade e performance, sempre atualizado com as últimas tecnologias e tendências de design.
+                </p>
+                <div className="flex space-x-4">
+                  <Button className="bg-gray-500/10 hover:bg-gray-500/30 backdrop-blur-sm" variant="outline" size="icon">
+                    <Github className="h-5 w-5" />
+                  </Button>
+                  <Button className="bg-gray-500/10 hover:bg-gray-500/30 backdrop-blur-sm" variant="outline" size="icon">
+                    <Linkedin className="h-5 w-5" />
+                  </Button>
+                  <Button className="bg-gray-500/10 hover:bg-gray-500/30 backdrop-blur-sm" variant="outline" size="icon">
+                    <Twitter className="h-5 w-5" />
+                  </Button>
+                </div>
+              </motion.div>
+              <motion.div
+                className="md:w-1/2"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                <div className="relative w-64 h-64 mx-auto">
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 rounded-full blur-2xl opacity-70"></div>
+                  <img
+                    src="https://2.gravatar.com/avatar/0aa54c5449234e127cd1662e9b8b50ebdc00638602048ea2932f6d1eda7507db?size=512"
+                    alt="Levi Leal Gravatar Image"
+                    className="relative rounded-full w-full h-full object-cover"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+          <section id="skills" className="mb-24">
+            <h3 className="text-3xl font-bold mb-8 text-center">Habilidades & Tecnologias</h3>
+            <motion.div
+              className="flex flex-wrap justify-center gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              {Skills.map((skill) => (
+                <span key={skill} className="bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full text-sm font-medium shadow-lg hover:shadow-xl transition-shadow duration-300 border border-green-500">
+                  {skill}
+                </span>
+              ))}
+            </motion.div>
+          </section>
+
+          <section id="projects" className="mb-24">
+            <h3 className="text-3xl font-bold mb-8 text-center">Projetos Destacados</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {Projects.map((project, index) => {
+                if (!project.highlight) {
+                  return null
+                }
+                return (
+                  <ProjectCard key={index} project={project} />
+                )
+              })}
+            </div>
+          </section>
+        </main>
+  )
 }
