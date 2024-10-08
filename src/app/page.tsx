@@ -11,7 +11,7 @@ import { Skills } from "@/data/skills"
 export default function Home() {
   return (
         <main className="container mx-auto px-4 py-12">
-          <section id="about" className="mb-24 h-[50vh] flex flex-col justify-center ">
+          <section id="about" className="mb-24 flex flex-col justify-center ">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <motion.div
                 className="md:w-1/2 mb-8 md:mb-0"

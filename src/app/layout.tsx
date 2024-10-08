@@ -80,8 +80,7 @@ export default function RootLayout({
         >
           <Background>
             <Header />
-            <div className="min-h-[calc(100vh-200px)]">
-
+            <div>
               {children}
               <Toaster />
             </div>
