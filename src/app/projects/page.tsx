@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Github, Linkedin, Mail, Twitter } from "lucide-react"
 import { ProjectCard } from "../_components/projectsCard"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 
 
@@ -75,19 +76,51 @@ export default function ProjectsPage() {
                         Tem um projeto em mente? Vamos conversar sobre como posso ajudar a torná-lo realidade.
                     </p>
                     <div className="flex justify-center space-x-4">
-                        <Button className="bg-gray-500/30 hover:bg-gray-500/50 backdrop-blur-md" variant="outline" size="icon">
-                            <Github className="h-5 w-5" />
-                        </Button>
-                        <Button className="bg-gray-500/30 hover:bg-gray-500/50 backdrop-blur-md" variant="outline" size="icon">
-                            <Linkedin className="h-5 w-5" />
-                        </Button>
-                        <Button className="bg-gray-500/30 hover:bg-gray-500/50 backdrop-blur-md" variant="outline" size="icon">
-                            <Twitter className="h-5 w-5" />
-                        </Button>
-                        <Button className="bg-green-500 hover:bg-green-600 text-white">
-                            <Mail className="h-4 w-4 mr-2" />
-                            Contato
-                        </Button>
+                        <TooltipProvider>
+                            <Tooltip>
+                                <TooltipTrigger asChild>
+                                    <Button className="bg-gray-500/10 hover:bg-gray-500/30" variant="outline" size="icon" asChild>
+                                        <a href="https://github.com/levifleal" target="_blank" rel="noopener noreferrer">
+                                            <Github className="h-5 w-5" />
+                                            <span className="sr-only">GitHub</span>
+                                        </a>
+                                    </Button>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p>GitHub</p>
+                                </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
+                        <TooltipProvider>
+                            <Tooltip>
+                                <TooltipTrigger asChild>
+                                    <Button className="bg-gray-500/10 hover:bg-gray-500/30" variant="outline" size="icon" asChild>
+                                        <a href="https://linkedin.com/in/levifleal" target="_blank" rel="noopener noreferrer">
+                                            <Linkedin className="h-5 w-5" />
+                                            <span className="sr-only">LinkedIn</span>
+                                        </a>
+                                    </Button>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p>LinkedIn</p>
+                                </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
+                        <TooltipProvider>
+                            <Tooltip>
+                                <TooltipTrigger asChild>
+                                    <Button className="bg-gray-500/10 hover:bg-gray-500/30" variant="outline" size="icon" asChild>
+                                        <a href="mailto:contato@levileal.com">
+                                            <Mail className="h-5 w-5" />
+                                            <span className="sr-only">Email</span>
+                                        </a>
+                                    </Button>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p>Email</p>
+                                </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
                     </div>
                 </motion.div>
             </section>

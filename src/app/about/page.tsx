@@ -219,7 +219,7 @@ export default function AboutPage() {
                                     <Tooltip>
                                         <TooltipTrigger asChild>
                                             <Button className="bg-gray-500/10 hover:bg-gray-500/30" variant="outline" size="icon" asChild>
-                                                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                                                <a href="https://github.com/levifleal" target="_blank" rel="noopener noreferrer">
                                                     <Github className="h-5 w-5" />
                                                     <span className="sr-only">GitHub</span>
                                                 </a>
@@ -234,7 +234,7 @@ export default function AboutPage() {
                                     <Tooltip>
                                         <TooltipTrigger asChild>
                                             <Button className="bg-gray-500/10 hover:bg-gray-500/30" variant="outline" size="icon" asChild>
-                                                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                                                <a href="https://linkedin.com/in/levifleal" target="_blank" rel="noopener noreferrer">
                                                     <Linkedin className="h-5 w-5" />
                                                     <span className="sr-only">LinkedIn</span>
                                                 </a>
@@ -249,22 +249,7 @@ export default function AboutPage() {
                                     <Tooltip>
                                         <TooltipTrigger asChild>
                                             <Button className="bg-gray-500/10 hover:bg-gray-500/30" variant="outline" size="icon" asChild>
-                                                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-                                                    <Twitter className="h-5 w-5" />
-                                                    <span className="sr-only">Twitter</span>
-                                                </a>
-                                            </Button>
-                                        </TooltipTrigger>
-                                        <TooltipContent>
-                                            <p>Twitter</p>
-                                        </TooltipContent>
-                                    </Tooltip>
-                                </TooltipProvider>
-                                <TooltipProvider>
-                                    <Tooltip>
-                                        <TooltipTrigger asChild>
-                                            <Button className="bg-gray-500/10 hover:bg-gray-500/30" variant="outline" size="icon" asChild>
-                                                <a href="mailto:your.email@example.com">
+                                                <a href="mailto:contato@levileal.com">
                                                     <Mail className="h-5 w-5" />
                                                     <span className="sr-only">Email</span>
                                                 </a>

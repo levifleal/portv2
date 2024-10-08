@@ -29,21 +29,15 @@ const Footer = () => {
                     </nav>
                     <div className="flex space-x-2">
                         <Button className="bg-gray-500/20 hover:bg-gray-500/40 backdrop-blur-sm" variant="outline" size="icon" asChild>
-                            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/levifleal" target="_blank" rel="noopener noreferrer">
                                 <Github className="h-4 w-4" />
                                 <span className="sr-only">GitHub</span>
                             </a>
                         </Button>
                         <Button className="bg-gray-500/20 hover:bg-gray-500/40 backdrop-blur-sm" variant="outline" size="icon" asChild>
-                            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                            <a href="https://linkedin.com/in/levifleal" target="_blank" rel="noopener noreferrer">
                                 <Linkedin className="h-4 w-4" />
                                 <span className="sr-only">LinkedIn</span>
-                            </a>
-                        </Button>
-                        <Button className="bg-gray-500/20 hover:bg-gray-500/40 backdrop-blur-sm" variant="outline" size="icon" asChild>
-                            <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-                                <Twitter className="h-4 w-4" />
-                                <span className="sr-only">Twitter</span>
                             </a>
                         </Button>
                     </div>
